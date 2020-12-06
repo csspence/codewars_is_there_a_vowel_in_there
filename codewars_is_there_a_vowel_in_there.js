@@ -6,6 +6,17 @@ If they are, change the array value to a string of that vowel.
 Return the resulting array.
 */
 
-function isVow(a){
+const isVow = (a) => {
+  let vowels = 'aeiou';
+  let index = 0;
+  while(index < a.length) {
+    for(let i = 0; i < vowels.length; i++) {
+      if(a[index] === vowels.charCodeAt(i)) {
+        a[index] = vowels[i];
+      }
+    }
+    index++;
+  }
 
+  return a;
 }
